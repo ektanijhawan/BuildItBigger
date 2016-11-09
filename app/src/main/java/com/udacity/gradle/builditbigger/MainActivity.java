@@ -12,7 +12,7 @@ import com.example.Joker;
 import com.example.androidjokelibrary.AndroidLibActivity;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements EndpointsAsyncTask.EndpoinrResponseInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +44,28 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view) {
+      //  new EndpointsAsyncTask(this).execute();
+        new EndpointsAsyncTask(MainActivity.this).execute();
        // Joker joker= new Joker();
        // Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
-        Intent intent=new Intent(this,AndroidLibActivity.class);
+    //    Intent intent=new Intent(this,AndroidLibActivity.class);
        // intent.putExtra("joke",joker.getJoke());
-        startActivity(intent);
+      //  startActivity(intent);
     }
 
 
-}
+    @Override
+    public void onResponse(boolean isSuccess, String result) {
+
+        if (isSuccess) {
+            Intent displayIntent = new Intent(this, AndroidLibActivity.class);
+            displayIntent.putExtra("jokeToDisplay", result);
+            startActivity(displayIntent);
+
+            Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Some Error: " + result, Toast.LENGTH_LONG).show();
+        }
+    }
+    }
+
