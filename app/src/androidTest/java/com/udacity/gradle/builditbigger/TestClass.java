@@ -1,6 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
-import android.support.test.annotation.UiThreadTest;
+import android.support.test.annotation.*;
 import android.test.AndroidTestCase;
 
 import org.junit.Test;
@@ -11,6 +11,13 @@ import java.util.concurrent.TimeUnit;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 import static junit.framework.Assert.fail;
+
+import org.junit.Test;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by Ekta on 13-11-2016.
