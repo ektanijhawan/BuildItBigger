@@ -1,17 +1,19 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.free;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.Joker;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.example.Joker;
-/**
- * A placeholder fragment containing a simple view.
- */
+import com.udacity.gradle.builditbigger.R;
+
+
 public class MainActivityFragment extends Fragment {
 
     public MainActivityFragment() {
@@ -20,8 +22,8 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_main, container, false);
-  Joker joker= new Joker();
+        View root = inflater.inflate(R.layout.fragment_main_activity, container, false);
+        Joker joker= new Joker();
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
