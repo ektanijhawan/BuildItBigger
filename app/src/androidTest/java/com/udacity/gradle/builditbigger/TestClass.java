@@ -16,7 +16,7 @@ import static junit.framework.Assert.fail;
  * Created by Ekta on 13-11-2016.
  */
 
-public class TestClass  implements EndpointsAsyncTask.EndpoinrResponseInterface{
+public class TestClass  implements EndpointsAsyncTask.EndpointResponseInterface{
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);

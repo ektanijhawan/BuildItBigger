@@ -13,8 +13,7 @@ import android.widget.Toast;
 
 import com.example.Joker;
 import com.example.androidjokelibrary.AndroidLibActivity;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+
 import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import com.udacity.gradle.builditbigger.R;
 
