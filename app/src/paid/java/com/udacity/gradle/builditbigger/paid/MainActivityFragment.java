@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.Joker;
 import com.google.android.gms.ads.AdRequest;
@@ -17,7 +18,7 @@ import com.udacity.gradle.builditbigger.R;
  * A simple {@link Fragment} subclass.
  */
 public class MainActivityFragment extends Fragment {
-
+    private ProgressBar spinner;
     public MainActivityFragment() {
     }
 
@@ -27,6 +28,7 @@ public class MainActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_main_activity, container, false);
 
 
+        spinner = (ProgressBar)root.findViewById(R.id.progressBar1);
 
         return root;
     }

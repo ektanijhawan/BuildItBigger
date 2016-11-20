@@ -19,10 +19,12 @@ import java.io.IOException;
 
 public class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
     private static MyApi myApiService = null;
-    private boolean isSuccess;
-    private EndpoinrResponseInterface responseInterface;
+    public boolean isSuccess;
+    String result;
+    public EndpoinrResponseInterface responseInterface;
 
-    EndpointsAsyncTask(EndpoinrResponseInterface responseInterface) {
+    EndpointsAsyncTask(){}
+  public   EndpointsAsyncTask(EndpoinrResponseInterface responseInterface) {
         this.responseInterface = responseInterface;
 
     }
@@ -57,15 +59,17 @@ public class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result) {
 
         responseInterface.onResponse(isSuccess, result);
-
+ this.result=result;
         /**/
 
 
     }
 
+
     public interface EndpoinrResponseInterface {
 
-        void onResponse(boolean isSuccess, String result);
+       public void onResponse(boolean isSuccess, String result);
+
 
     }
 }

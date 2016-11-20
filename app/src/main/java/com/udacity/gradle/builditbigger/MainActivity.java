@@ -44,13 +44,14 @@ public class MainActivity extends ActionBarActivity implements EndpointsAsyncTas
     }
 
     public void tellJoke(View view) {
-      //  new EndpointsAsyncTask(this).execute();
-        new EndpointsAsyncTask(MainActivity.this).execute();
-       // Joker joker= new Joker();
-       // Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
-    //    Intent intent=new Intent(this,AndroidLibActivity.class);
-       // intent.putExtra("joke",joker.getJoke());
-      //  startActivity(intent);
+        //  new EndpointsAsyncTask(this).execute();
+        //  Toast.makeText(this,"called",Toast.LENGTH_SHORT).show();
+        // new EndpointsAsyncTask(MainActivity.this).execute();
+        // Joker joker= new Joker();
+        // Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
+        //    Intent intent=new Intent(this,AndroidLibActivity.class);
+        // intent.putExtra("joke",joker.getJoke());
+        //  startActivity(intent);
     }
 
 
@@ -67,5 +68,5 @@ public class MainActivity extends ActionBarActivity implements EndpointsAsyncTas
             Toast.makeText(this, "Some Error: " + result, Toast.LENGTH_LONG).show();
         }
     }
-    }
+}
 
