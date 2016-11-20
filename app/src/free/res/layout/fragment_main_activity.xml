@@ -21,11 +21,12 @@
         android:layout_below="@+id/instructions_text_view"
         android:onClick="tellJoke"
         android:text="@string/button_text"
-        android:id="@+id/butttonJoke"
+        android:id="@+id/buttonJoke"
 
         />
 
     <ProgressBar
+        android:layout_below="@id/buttonJoke"
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"

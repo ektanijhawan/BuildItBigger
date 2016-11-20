@@ -5,14 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-
-import com.example.Joker;
-import com.example.androidjokelibrary.AndroidLibActivity;
 
 
-public class MainActivity extends ActionBarActivity implements EndpointsAsyncTask.EndpoinrResponseInterface {
+
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,30 +39,8 @@ public class MainActivity extends ActionBarActivity implements EndpointsAsyncTas
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        //  new EndpointsAsyncTask(this).execute();
-        //  Toast.makeText(this,"called",Toast.LENGTH_SHORT).show();
-        // new EndpointsAsyncTask(MainActivity.this).execute();
-        // Joker joker= new Joker();
-        // Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
-        //    Intent intent=new Intent(this,AndroidLibActivity.class);
-        // intent.putExtra("joke",joker.getJoke());
-        //  startActivity(intent);
-    }
 
 
-    @Override
-    public void onResponse(boolean isSuccess, String result) {
 
-        if (isSuccess) {
-            Intent displayIntent = new Intent(this, AndroidLibActivity.class);
-            displayIntent.putExtra("jokeToDisplay", result);
-            startActivity(displayIntent);
-
-            Toast.makeText(this, result, Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Some Error: " + result, Toast.LENGTH_LONG).show();
-        }
-    }
 }
 

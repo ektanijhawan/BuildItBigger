@@ -21,10 +21,10 @@ public class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
     private static MyApi myApiService = null;
     public boolean isSuccess;
     String result;
-    public EndpoinrResponseInterface responseInterface;
+    public EndpointResponseInterface responseInterface;
 
     EndpointsAsyncTask(){}
-  public   EndpointsAsyncTask(EndpoinrResponseInterface responseInterface) {
+  public   EndpointsAsyncTask(EndpointResponseInterface responseInterface) {
         this.responseInterface = responseInterface;
 
     }
@@ -66,9 +66,10 @@ public class EndpointsAsyncTask extends AsyncTask<String, Void, String> {
     }
 
 
-    public interface EndpoinrResponseInterface {
+    public interface EndpointResponseInterface
+    {
 
-       public void onResponse(boolean isSuccess, String result);
+        void onResponse(boolean isSuccess, String result);
 
 
     }

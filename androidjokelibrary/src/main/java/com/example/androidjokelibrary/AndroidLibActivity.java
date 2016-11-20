@@ -31,7 +31,5 @@ public class AndroidLibActivity extends AppCompatActivity {
         }
     }
 
-    public void showJoke(String joke){
 
-    }
 }

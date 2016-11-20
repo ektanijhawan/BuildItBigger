@@ -24,7 +24,7 @@ import com.udacity.gradle.builditbigger.MainActivity;
 import com.udacity.gradle.builditbigger.R;
 
 
-public class MainActivityFragment extends Fragment implements EndpointsAsyncTask.EndpoinrResponseInterface {
+public class MainActivityFragment extends Fragment implements EndpointsAsyncTask.EndpointResponseInterface {
 
     public MainActivityFragment() {
     }
@@ -38,8 +38,8 @@ public class MainActivityFragment extends Fragment implements EndpointsAsyncTask
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main_activity, container, false);
-        Joker joker = new Joker();
-        buttonJoke = (Button) root.findViewById(R.id.butttonJoke);
+
+        buttonJoke = (Button) root.findViewById(R.id.buttonJoke);
         progressBar = (ProgressBar) root.findViewById(R.id.progressBar);
         mAdView = (AdView) root.findViewById(R.id.adView);
         progressBar.setVisibility(View.INVISIBLE);
@@ -87,9 +87,9 @@ public class MainActivityFragment extends Fragment implements EndpointsAsyncTask
             displayIntent.putExtra("jokeToDisplay", result);
             startActivity(displayIntent);
 
-            Toast.makeText(getActivity(), result, Toast.LENGTH_LONG).show();
+
         } else {
-            Toast.makeText(getActivity(), "Some Error: " + result, Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), getResources().getString(R.string.error) + result, Toast.LENGTH_LONG).show();
         }
     }
 
