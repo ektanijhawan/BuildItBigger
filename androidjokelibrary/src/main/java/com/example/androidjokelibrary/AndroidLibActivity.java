@@ -16,6 +16,7 @@ public class AndroidLibActivity extends AppCompatActivity {
         setContentView(R.layout.activity_android_lib);
 
 
+
        TextView tvJoke = (TextView) findViewById(R.id.tvJoke);
 
         if(getIntent() != null && getIntent().hasExtra("jokeToDisplay")){
